@@ -1,0 +1,3 @@
+/AMV/project/faceDetection/opencv/build/CMakeFiles/rebuild_cache.dir
+/AMV/project/faceDetection/opencv/build/CMakeFiles/detector.dir
+/AMV/project/faceDetection/opencv/build/CMakeFiles/edit_cache.dir
