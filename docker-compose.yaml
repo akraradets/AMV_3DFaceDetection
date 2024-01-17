@@ -12,7 +12,9 @@ services:
       - vscode-server:/root/.vscode-server
       - venv:/root/project/.venv
     environment:
-      - DISPLAY=${HOSTNAME}:0
+
+      # - DISPLAY=${HOSTNAME}:0 # for XQuartz
+      - DISPLAY=${DISPLAY} # for Ubuntu
 volumes:
   vscode-server:
   venv:
