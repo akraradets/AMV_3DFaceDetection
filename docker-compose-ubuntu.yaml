@@ -7,13 +7,12 @@ services:
       context: .
       dockerfile: .Dockerfile
     volumes:
+      - ./src:/root/src
       - /tmp/.X11-unix:/tmp/.X11-unix
       - vscode-server:/root/.vscode-server
-      - venv:/root/project/.venv
     devices:
       - /dev/video0:/dev/video0
     environment:
       - DISPLAY=${DISPLAY} # for Ubuntu
 volumes:
   vscode-server:
-  venv:

@@ -6,12 +6,13 @@ services:
     build:
       context: .
       dockerfile: .Dockerfile
+    # platform: linux/amd64
     volumes:
+      - ./src:/root/src
       - /tmp/.X11-unix:/tmp/.X11-unix
       - vscode-server:/root/.vscode-server
-      - venv:/root/project/.venv
     environment:
       - DISPLAY=${HOSTNAME}:0 # for XQuartz
+
 volumes:
   vscode-server:
-  venv:
