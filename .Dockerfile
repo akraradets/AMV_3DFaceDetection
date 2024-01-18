@@ -11,11 +11,14 @@ ENV DISPLAY host.docker.internal:0
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libopencv-dev \
     python3-opencv \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    && apt-get clean
 
 
+RUN apt install -y nautilus
 
+
+COPY s.py /root/project/s.py
+RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 CMD tail -f /dev/null
 
 # docker run -it -v $PWD:/app/ --device=/dev/video0:/dev/video0 
