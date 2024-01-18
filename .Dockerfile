@@ -20,6 +20,3 @@ RUN apt install -y nautilus
 COPY s.py /root/project/s.py
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 CMD tail -f /dev/null
-
-# docker run -it -v $PWD:/app/ --device=/dev/video0:/dev/video0 
-# -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY opencv-webcam bash:q!

@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  python:
+    image: python-openvcv:v0.0.1
+    build:
+      context: .
+      dockerfile: .Dockerfile
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - vscode-server:/root/.vscode-server
+      - venv:/root/project/.venv
+    environment:
+      - DISPLAY=${HOSTNAME}:0 # for XQuartz
+volumes:
+  vscode-server:
+  venv:
